@@ -1,0 +1,107 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Node Authentication</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+	  body { padding-top:0px; word-wrap:break-word; }
+	  .container{ width: 100%; padding: 0; margin: 0;}
+	  .btn-sm, .btn-xs{ float: right; }
+	  .page-header{ margin: 0 0 0px 0; border-bottom: 1px solid black; padding: 10px 10px 10px 10px} 
+       h1{margin: 10px 0 0 10px; float: left; font-size: 24px; color: white} 
+       .dropdown{float: right; position: absolute; margin: 0px 0 0 0;}
+       .fa{margin-right: 10px}
+       .glyphicon{padding: 0 3px 0 0px;}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+   
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    
+      <ul class="nav navbar-nav">
+         <li><h1><span class="fa fa-user">
+	  		</span><%= user.local.email %></h1>
+	  	</li>
+    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span>Settings<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-inbox"></span><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bullhorn"></span>Alerts<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+
+<li>
+          <a href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+   </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-2">
+		  <ul class="list-group">
+  <li class="list-group-item"><span class="badge">5</span><a href="/profile"><span class="glyphicon glyphicon-play"></span>Live View</a></li>
+    <li class="list-group-item"><span class="badge">5</span><a href="/reports"><span class="glyphicon glyphicon-stats"></span>Reports</a></li>
+      <li class="list-group-item"><span class="badge">5</span><a href="/"><span class="glyphicon glyphicon-cloud"></span>Cloud Manager</a></li>
+  <li class="list-group-item"><span class="badge">5</span> Deleted</li> 
+  <li class="list-group-item"><span class="badge">3</span> Warnings</li> 
+</ul>
+		</div>
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+				
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>

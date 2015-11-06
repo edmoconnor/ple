@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script>
+    angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
+angular.module('ui.bootstrap.demo').controller('TabsDemoCtrl', function ($scope, $window) {
+  $scope.tabs = [
+    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+    { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
+  ];
+
+  $scope.alertMe = function() {
+    setTimeout(function() {
+      $window.alert('You\'ve selected the alert tab!');
+    });
+  };
+});
+    
+    </script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div ng-controller="TabsDemoCtrl">
+
+
+  <hr />
+
+  <uib-tabset vertical="true" type="pills">
+    <uib-tab heading="Vertical 1">Vertical content 1adfg</uib-tab>
+    <uib-tab heading="Vertical 2">Vertical content 2</uib-tab>
+  </uib-tabset>
+
+  <hr />
+
+
+</div>
+  </body>
+</html>
